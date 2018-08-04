@@ -126,7 +126,7 @@ public class DownloadLicenses extends ConventionTask {
                                                       dependenciesToIgnore: excludeDependencies,
                                                       dependencyConfiguration: dependencyConfiguration)
             licenseResolver.provideLicenseMap4Dependencies()
-        }.memoize()
+        }
 
         // Lazy reporter resolving
         def reporter = { new LicenseReporter(xmlOutputDir: getXmlDestination(), htmlOutputDir: getHtmlDestination(), jsonOutputDir: getJsonDestination()) }
